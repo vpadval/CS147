@@ -8,7 +8,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="viewport" content="width=device-width, user-scalable=no" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-
+		
 		<link href="style.css" rel="stylesheet" type="text/css">
 	</head>
 
@@ -48,7 +48,8 @@
 			// Insert into orders
 			// but oops query is not defined... yet
 			
-			$query = "";
+			$query = "insert into orders (name, email, book) values
+			('$name', '$email', '$book')";
 			
 			$result = mysql_query($query);
 			
