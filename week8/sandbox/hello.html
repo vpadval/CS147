@@ -64,6 +64,7 @@
 		
 		$(document).unbind('pageshow');
 		$(document).bind('pageshow', function(event){ 
+			$("#popupPanel").popup({history: false});
 			$( "#popupPanel" ).on({
 		    popupbeforeposition: function() {
 		        var h = $( window ).height();
@@ -71,6 +72,7 @@
 		        $( "#popupPanel" ).css( "height", h );
 		    }
 			});
+			$("#popupPanel").popup("open");
 		});
 		</script> 
 
@@ -81,6 +83,7 @@
 					
 	</div>
 	<div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
+		<img src="arrow.png" style="-webkit-transform:rotate(Xdeg);-webkit-transform: scaleX(X);position:absolute;top:0px;right:0;" />
 	
 	    <button data-theme="a" data-icon="back" data-mini="true">Back</button>
 	    <button data-theme="a" data-icon="grid" data-mini="true">Menu</button>
